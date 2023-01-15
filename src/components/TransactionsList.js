@@ -8,7 +8,7 @@ function TransactionsList({ transactions, setTransactions, search}) {
     category: -1,
     amount: -1
   })
-  let transactionList = "Loading..."
+  let transactionList = "No data matches criteria"
 
   if(transactions){
     const filteredTransactions = transactions.filter(transaction => {
@@ -87,7 +87,7 @@ function TransactionsList({ transactions, setTransactions, search}) {
             <h3 className="ui center aligned header" onClick={sortTransactionList} title="click to sort by description">Description</h3>
           </th>
           <th style={{backgroundColor: "rgba(0, 0, 0, 0.10)", cursor: "pointer"}}>
-            <h3 className="ui center aligned header" onClick={sortTransactionList} title="click to sort by category">Category</h3>
+            <h3 className="ui center aligned header" title="click to sort by category">Category</h3>
           </th>
           <th style={{backgroundColor: "rgba(0, 0, 0, 0.10)", cursor: "pointer"}}>
             <h3 className="ui center aligned header" onClick={sortTransactionList} title="click to sort by amount">Amount</h3>
