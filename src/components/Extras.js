@@ -19,4 +19,4 @@ function validateForm(formData){
     return formDetails;
   }
 
-export { validateForm}
+export { validateForm };

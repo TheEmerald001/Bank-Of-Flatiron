@@ -37,7 +37,6 @@ function AddTransactionForm({newData}) {
     const key = e.target.name
     const value = e.target.value;
     setFormData({...formData, [key]: value})
-    console.log(formData)
   }
   return (    
     <div className="ui segment">
