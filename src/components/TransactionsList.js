@@ -35,7 +35,7 @@ function TransactionsList({ transactions, setTransactions, search}) {
     const sortBy  = event.target.textContent.toLowerCase()
     updateSortStrategy(sortBy)
 
-    let transactionsCopy 
+    let transactionsCopy;
     
     if(sortBy === "category" || sortBy === "description"){
       transactionsCopy = [...transactions].sort((a, b) => {
@@ -87,7 +87,7 @@ function TransactionsList({ transactions, setTransactions, search}) {
             <h3 className="ui center aligned header" onClick={sortTransactionList} title="click to sort by description">Description</h3>
           </th>
           <th style={{backgroundColor: "rgba(0, 0, 0, 0.10)", cursor: "pointer"}}>
-            <h3 className="ui center aligned header" title="click to sort by category">Category</h3>
+            <h3 className="ui center aligned header" onClick={sortTransactionList} title="click to sort by category">Category</h3>
           </th>
           <th style={{backgroundColor: "rgba(0, 0, 0, 0.10)", cursor: "pointer"}}>
             <h3 className="ui center aligned header" onClick={sortTransactionList} title="click to sort by amount">Amount</h3>
