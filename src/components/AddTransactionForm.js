@@ -16,8 +16,6 @@ function AddTransactionForm({newData}) {
 
     if(formInput.containsEmptyInput){
       alert("Please fill in all inputs")
-    }else if(formInput.hasInvalidDate){
-      alert("Please enter valid date\nYear is expected to be between 2000 and today")
     }else if(!formInput.isInvalid){
       // persist transaction on server after validations
       fetch("http://localhost:8001/transactions", {

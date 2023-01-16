@@ -76,6 +76,13 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2023-01-11",
+      "description": "Ride to Johannesburg",
+      "category": "Transportation",
+      "amount": "500",
+      "id": 13
     }
   ]
 }

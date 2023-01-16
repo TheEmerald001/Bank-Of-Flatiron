@@ -1,7 +1,7 @@
+//this component aim to provide helper functions for checking data validity
 function validateForm(formData){
     const formDetails = {
       containsEmptyInput:false,
-      hasInvalidDate:true,
       isInvalid:false
     }
 
@@ -12,12 +12,6 @@ function validateForm(formData){
         break
       }
     }
-
-    //date should be between 2000 and today
-    const allowablePastDate = (new Date("2019")).getTime()
-    const today = (new Date()).getTime()
-    const formDataDate = (new Date(formData.date)).getTime()
-    formDetails.hasInvalidDate = formDataDate < allowablePastDate ? true : formDataDate > today ? true : false
 
     //general state of validity of the form
     formDetails.isInvalid = formDetails.containsEmptyInput || formDetails.hasInvalidDate || false
