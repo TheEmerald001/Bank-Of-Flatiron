@@ -14,10 +14,10 @@ function AccountContainer() {
   useEffect(() => {
     fetch("http://localhost:8001/transactions")
       .then((r) => r.json())
-      .then((data) => setTransactions(data)) //Setter activity for transaction after server response
+      .then((data) => setTransactions(data)) //Setter activity for transaction after server response, this is the data in state when the app first loads
   }, [])
 
-  //Re-renders page with updated state after creating a new transaction
+  //Re-renders page with updated state after creating a new transaction, use this when trying to re render with updated data
   function updatedTransactions(newTransactions) {
    const updatedTransactionsArray = [...transactions, newTransactions]
    setTransactions(updatedTransactionsArray)

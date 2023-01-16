@@ -8,12 +8,12 @@ function TransactionsList({ transactions, setTransactions, search}) {
     category: -1,
     amount: -1
   })
-  let transactionList = "No data matches criteria"
+  let transactionList;
 
   if(transactions){
     const filteredTransactions = transactions.filter(transaction => {
       return (
-        transaction.description.toLowerCase().includes(search.toLowerCase())
+        transaction.description.toLowerCase().includes(search.toLowerCase()) || transaction.category.toLowerCase().includes(search.toLowerCase())
       )
     })
     transactionList = filteredTransactions.map((transaction) => (    
