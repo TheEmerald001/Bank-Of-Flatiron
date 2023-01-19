@@ -12,7 +12,7 @@ function AccountContainer() {
   
    //Featch all transaction from server
   useEffect(() => {
-    fetch("http://localhost:8001/transactions")
+    fetch(`${REACT_APP_API_URL}`)
       .then((r) => r.json())
       .then((data) => setTransactions(data)) //Setter activity for transaction after server response, this is the data in state when the app first loads
   }, [])
