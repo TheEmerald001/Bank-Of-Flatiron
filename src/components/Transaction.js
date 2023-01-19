@@ -2,7 +2,7 @@ import React from "react";
 
 function Transaction({id, date, description, category, amount}) {
   function handleDelete(event){
-    fetch(`${REACT_APP_API_URL}/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

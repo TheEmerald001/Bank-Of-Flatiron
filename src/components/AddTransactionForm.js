@@ -18,7 +18,7 @@ function AddTransactionForm({newData}) {
       alert("Please fill in all inputs")
     }else if(!formInput.isInvalid){
       // persist transaction on server after validations
-      fetch(`${REACT_APP_API_URL}`, {
+      fetch(`${process.env.REACT_APP_API_URL}`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
