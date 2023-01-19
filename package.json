@@ -9,6 +9,9 @@
     "react-scripts": "4.0.1",
     "semantic-ui-css": "^2.2.10"
   },
+  "engines": {
+    "node": "16.x"
+  },  
   "devDependencies": {
     "json-server": "^0.15.1"
   },
